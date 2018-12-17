@@ -9,18 +9,21 @@ import static java.lang.System.out;
 public class ListNets {
 
 	public static void main(String args[]) throws SocketException {
-		String ip = "192.168.0.61";
-		String mac = "64-00-6A-43-F7-14";
-		boolean flag = validatoIpAndMacAddress(ip, mac);
-		boolean macflag = validateMacAddress(mac);
-		out.printf("validatoMacAddress flag=%s\n", macflag);
-		out.printf("validatoIpAndMacAddress flag=%s\n", flag);
+//		String ip = "192.168.0.61";
+//		String mac = "64-00-6A-43-F7-14";
+//		boolean flag = validatoIpAndMacAddress(ip, mac);
+//		boolean macflag = validateMacAddress(mac);
+//		out.printf("validatoMacAddress flag=%s\n", macflag);
+//		out.printf("validatoIpAndMacAddress flag=%s\n", flag);
+
+        getAllNet();
+
 	}
 
 	/**
 	 * 
 	 * @Title: displayInterfaceInformation @Description: @param: @param
-	 * netint @param: @throws SocketException @return: void @throws
+	 *         netint @param: @throws SocketException @return: void @throws
 	 */
 	static void displayInterfaceInformation(NetworkInterface netint) throws SocketException {
 		out.printf("Display name: %s\n", netint.getDisplayName());
@@ -99,5 +102,29 @@ public class ListNets {
 			}
 		}
 		return returnFlag;
+	}
+
+	
+	/**
+	 * 
+	 * @Title: getAllNet
+	 * @Description:获取所有网卡信息
+	 * @param: @return      
+	 * @return: List<NetworkInterface>      
+	 * @throws
+	 */
+	public static  List<NetworkInterface> getAllNet() {
+
+		List<NetworkInterface> list = new ArrayList<NetworkInterface>();
+		Enumeration<NetworkInterface> nis = null;
+		try {
+			nis = NetworkInterface.getNetworkInterfaces();
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+		while (nis.hasMoreElements()) {
+			list.add(nis.nextElement());
+		}
+		return list;
 	}
 }

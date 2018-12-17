@@ -10,7 +10,15 @@ import mlicense.*;
 
 
 
- 
+ /**
+  * 
+  * @ClassName:  LicenseVertify   
+  * @Description:带MAC验证扩展的license校验   
+  * @author: Tyrone 
+  * @date:   2018年12月17日 下午3:14:00   
+  *     
+  * @Copyright: 2018 www.hengyunsoft.com Inc. All rights reserved.
+  */
 public class LicenseVertify
 {
 	/**
@@ -33,6 +41,7 @@ public class LicenseVertify
 	 * 公钥库路径
 	 */
 	private String pubPath;
+	
 	private String confPath="licenseVertifyConf.properties";
 	public LicenseVertify(String onlykey)
 	{

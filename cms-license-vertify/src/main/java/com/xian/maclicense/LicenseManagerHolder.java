@@ -4,8 +4,13 @@ import mlicense.LicenseManager;
 import mlicense.LicenseParam;
 
 /**
- * 单例模式下的证书管理器
- * @author Leon Lee
+ * 
+ * @ClassName:  LicenseManagerHolder   
+ * @Description:
+ * @author: Tyrone 
+ * @date:   2018年12月17日 下午3:13:08   
+ *     
+ * @Copyright: 2018 www.hengyunsoft.com Inc. All rights reserved.
  */
 public class LicenseManagerHolder
 {

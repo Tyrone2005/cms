@@ -13,5 +13,7 @@
     <module>cms-maclicense-create</module>
     <module>cms-license-api</module>
     <module>cms-license-console</module>
+    <module>cms-genkeypair</module>
+    <module>cms-console</module>
   </modules>
 </project>
