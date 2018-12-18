@@ -219,17 +219,11 @@ public class LicenseMake {
 		}
 	}
 	
-	public void create(License lic){
-		try {
+	public void create(License lic) throws Exception{
 			LicenseManager licenseManager = LicenseManagerHolder.getLicenseManager(wInitLicenseParam( lic));
 			LicenseContent content = buildLicenseContent( lic);
-			licenseManager.store(content, new File(lic.getLicPath()));
+			licenseManager.store(content, new File(lic.getLicPath() + File.separator + "license.lic"));
 			System.out.println("证书发布成功");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 }
 

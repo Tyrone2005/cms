@@ -1,0 +1,7 @@
+com\common\utils\LicenseMake.class
+com\license\service\LicenseService.class
+com\license\service\LicenseServiceImpl.class
+com\common\utils\LicenseVertify.class
+com\license\controller\LicenseController.class
+com\common\entity\RepJson.class
+com\license\entity\License.class

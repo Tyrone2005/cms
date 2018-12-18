@@ -3,12 +3,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	
-	<context:property-placeholder/>
-	<mvc:default-servlet-handler/>
-	
+
+	<context:property-placeholder />
+
+<!-- 自动扫描的包名 -->  
+    <context:component-scan base-package="com.license" ></context:component-scan>  
+       
+    <!-- 默认的注解映射的支持 -->  
+    <mvc:annotation-driven />  
+       
+    <!-- 视图解释类 -->  
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="prefix" value="/WEB-INF/jsp/"/>  
+        <property name="suffix" value=".jsp"/><!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑  -->  
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />  
+    </bean>  
+       
+    <!-- 拦截器 
+    <mvc:interceptors>  
+        <bean class="com.core.mvc.MyInteceptor" />  
+    </mvc:interceptors>         -->  
+       
+    <!-- 对静态资源文件的访问  -->  
+    <mvc:default-servlet-handler/>  
+    
+      
 </beans>

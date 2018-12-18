@@ -116,11 +116,8 @@
 			<version>2.10.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/de.schlichtherle.truelicense/truelicense-core 
-		<dependency>
-			<groupId>de.schlichtherle.truelicense</groupId>
-			<artifactId>truelicense-core</artifactId>
-			<version>1.33</version>
-		</dependency>-->
+			<dependency> <groupId>de.schlichtherle.truelicense</groupId> <artifactId>truelicense-core</artifactId> 
+			<version>1.33</version> </dependency> -->
 		<!-- https://mvnrepository.com/artifact/de.schlichtherle.truelicense/truelicense-xml -->
 		<dependency>
 			<groupId>de.schlichtherle.truelicense</groupId>
@@ -195,6 +192,32 @@
 			<artifactId>maclicense</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<!-- org.springframework.web.util.NestedServletException: Handler processing 
+			failed; nested exception is java.lang.NoClassDefFoundError: javax/servlet/jsp/jstl/core/Config -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.6</version>
+		</dependency>
+
 
 	</dependencies>
 	<build>
