@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.xian.tyrone</groupId>
 		<artifactId>cms</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 	</parent>
 	<groupId>com.xian.tyrone</groupId>
 	<artifactId>cms-console</artifactId>
@@ -209,6 +209,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>cms-console</finalName>
+		<finalName>crtLicense</finalName>
 	</build>
 </project>
